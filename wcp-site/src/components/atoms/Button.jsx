@@ -1,5 +1,5 @@
 import React from 'react';
-
+             
 /**
  *
  * @param {string} variant - Le style visuel (primary, secondary, danger).
