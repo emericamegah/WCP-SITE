@@ -1,0 +1,134 @@
+{
+    "profile": {
+        "id": "tenant_001",
+        "firstName": "Koffi",
+        "lastName": "N'Goran",
+        "email": "koffi.ngoran@example.com",
+        "property": {
+            "id": "prop_123",
+            "address": "Résidence Horizon, Appartement B204, Cocody Riviera"
+        }
+    },
+    "lease": {
+        "startDate": "2024-01-01",
+        "endDate": "2025-12-31",
+        "rentAmount": 450000,
+        "charges": 50000,
+        "deposit": 900000,
+        "status": "Active"
+    },
+    "receipts": [
+        {
+            "id": "rec_012",
+            "month": "Décembre 2024",
+            "date": "2024-12-05",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_dec_2024.pdf"
+        },
+        {
+            "id": "rec_011",
+            "month": "Novembre 2024",
+            "date": "2024-11-04",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_nov_2024.pdf"
+        },
+        {
+            "id": "rec_010",
+            "month": "Octobre 2024",
+            "date": "2024-10-06",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_oct_2024.pdf"
+        },
+        {
+            "id": "rec_009",
+            "month": "Septembre 2024",
+            "date": "2024-09-05",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_sep_2024.pdf"
+        },
+        {
+            "id": "rec_008",
+            "month": "Août 2024",
+            "date": "2024-08-04",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_aug_2024.pdf"
+        },
+        {
+            "id": "rec_007",
+            "month": "Juillet 2024",
+            "date": "2024-07-05",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_jul_2024.pdf"
+        },
+        {
+            "id": "rec_006",
+            "month": "Juin 2024",
+            "date": "2024-06-04",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_jun_2024.pdf"
+        },
+        {
+            "id": "rec_005",
+            "month": "Mai 2024",
+            "date": "2024-05-06",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_may_2024.pdf"
+        },
+        {
+            "id": "rec_004",
+            "month": "Avril 2024",
+            "date": "2024-04-05",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_apr_2024.pdf"
+        },
+        {
+            "id": "rec_003",
+            "month": "Mars 2024",
+            "date": "2024-03-04",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_mar_2024.pdf"
+        },
+        {
+            "id": "rec_002",
+            "month": "Février 2024",
+            "date": "2024-02-06",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_feb_2024.pdf"
+        },
+        {
+            "id": "rec_001",
+            "month": "Janvier 2024",
+            "date": "2024-01-05",
+            "amount": 500000,
+            "status": "paid",
+            "file": "quittance_jan_2024.pdf"
+        }
+    ],
+    "maintenance": [
+        {
+            "id": "tkt_002",
+            "subject": "Fuite d'eau lavabo salle de bain",
+            "date": "2025-01-20",
+            "status": "In Progress",
+            "description": "L'eau coule sous le lavabo principal malgré la fermeture du robinet."
+        },
+        {
+            "id": "tkt_001",
+            "subject": "Panne volet roulant salon",
+            "date": "2024-11-15",
+            "status": "Resolved",
+            "description": "Le volet reste bloqué à mi-hauteur."
+        }
+    ]
+}
