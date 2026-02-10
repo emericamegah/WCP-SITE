@@ -1,0 +1,35 @@
+const { DataTypes } = require('sequelize');
+
+module.exports = (sequelize) => {
+    return sequelize.define('User', {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        num: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        Sujet: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        message: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
+    }, {
+        tableName: 'User_info',
+        timestamps: false
+    });
+};
