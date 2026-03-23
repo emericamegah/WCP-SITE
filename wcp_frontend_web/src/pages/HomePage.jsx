@@ -4,6 +4,7 @@ import Navigation from '../components/organisms/Navbar';
 import HeroHeader from '../components/organisms/HeroHeader';
 import ServicesSection from '../components/organisms/ServicesSection';
 import FeaturedSection from '../components/organisms/FeaturedSection';
+import BespokeConcierge from '../components/organisms/BespokeConcierge';
 import Footer from '../components/organisms/Footer';
 
 const HomePage = () => {
@@ -42,9 +43,16 @@ const HomePage = () => {
         <>
             <Navigation />
             <HeroHeader />
-            <ServicesSection services={services} />
-            <FeaturedSection properties={properties} />
-            <Footer />
+            <div className="py-8 md:py-32">
+                <ServicesSection services={services} />
+            </div>
+            <div className="py-8 md:py-32 bg-surface-100">
+                <FeaturedSection properties={properties} />
+            </div>
+            <BespokeConcierge />
+            <div className="pt-8 md:pt-32">
+                <Footer />
+            </div>
         </>
     );
 };

@@ -21,12 +21,12 @@ const PropertyCard = ({
     const navigate = useNavigate();
 
     return (
-        <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full group">
+        <div className="bg-surface-200/50 rounded-3xl shadow-[0_4px_20px_rgba(25,28,29,0.02)] hover:shadow-[0_20px_40px_rgba(25,28,29,0.08)] transition-all duration-700 overflow-hidden border-none flex flex-col h-full group">
             {/* Image Container */}
-            <div className="relative overflow-hidden h-64">
+            <div className="relative overflow-hidden h-80">
                 <img
                     src={image}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1500ms] ease-out will-change-transform"
                     alt={title}
                 />
                 <div className="absolute top-4 left-4">
@@ -40,15 +40,15 @@ const PropertyCard = ({
             </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col flex-grow">
-                <div className="mb-4">
-                    <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-lg font-bold text-gray-900 line-clamp-1" title={title}>{title}</h3>
-                        <span className="text-lg font-bold text-wcp-blue-600 whitespace-nowrap ml-2">{price}</span>
+            <div className="p-8 md:p-10 flex flex-col flex-grow">
+                <div className="mb-6 flex-grow">
+                    <div className="flex flex-col gap-4 mb-6">
+                        <h3 className="text-2xl font-display font-semibold text-gray-900 leading-tight" title={title}>{title}</h3>
+                        <span className="text-xl font-sans tracking-tight font-light text-wcp-grey-800">{price}</span>
                     </div>
 
-                    <div className="flex items-center text-gray-500 text-sm mb-4">
-                        <Icon name="MapPin" size={14} className="mr-1 text-wcp-blue-500" />
+                    <div className="flex items-center text-wcp-grey-600 text-sm mb-8 font-sans uppercase tracking-widest font-semibold flex-grow">
+                        <Icon name="MapPin" size={16} className="mr-2 text-wcp-blue-600" />
                         {location}
                     </div>
 
@@ -67,10 +67,10 @@ const PropertyCard = ({
                 </div>
 
                 {/* Actions */}
-                <div className="mt-auto pt-4 border-t border-gray-100 flex gap-2">
+                <div className="mt-8 pt-6 border-t border-gray-100/50 flex gap-4">
                     <button
                         onClick={() => navigateToRequestSubmission(navigate, id)}
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors text-sm"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-wcp-blue-600 text-white hover:bg-gradient-to-br hover:from-wcp-blue-600 hover:to-wcp-blue-500 rounded-lg hover:shadow-[0_10px_20px_rgba(34,69,97,0.2)] hover:scale-[1.02] transition-all duration-300 btn-base text-sm"
                     >
                         <Send size={16} />
                         Postuler

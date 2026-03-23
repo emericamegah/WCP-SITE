@@ -10,23 +10,27 @@ const Navbar = () => {
     const { isAuthenticated, user } = useAuth();
 
     return (
-        <nav className="bg-white shadow-sm sticky top-0 z-50">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20">
+        <nav className="glass sticky top-0 z-50 transition-all duration-300">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-2">
+                <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
-                            <Icon name="Building2" className="text-wcp-blue-600 transition-transform group-hover:scale-110" size={28} />
-                            <span className="font-bold text-xl tracking-tight text-gray-900">WEST COAST PROPERTY</span>
+                        <Link to="/" className="flex-shrink-0 flex items-center gap-3 group">
+                            <Icon name="Building2" className="text-wcp-blue-600 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" size={32} />
+                            <span className="font-sans font-bold text-2xl tracking-widest text-wcp-dark-900 uppercase">WCP.</span>
                         </Link>
                     </div>
 
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        <Link to="/" className="text-gray-600 hover:text-wcp-blue-600 font-medium transition-colors">Accueil</Link>
-                        <Link to="/services" className="text-gray-600 hover:text-wcp-blue-600 font-medium transition-colors">Services</Link>
-                        <Link to="/biens" className="text-gray-600 hover:text-wcp-blue-600 font-medium transition-colors">Nos Biens</Link>
-                        <Link to="/contact" className="text-gray-600 hover:text-wcp-blue-600 font-medium transition-colors">Contact</Link>
+                    {/* Desktop Menu - Centered */}
+                    <div className="hidden md:flex flex-1 items-center justify-center space-x-8">
+                        <Link to="/" className="text-wcp-grey-700 hover:text-wcp-blue-600 font-semibold tracking-wide transition-colors">Accueil</Link>
+                        <Link to="/services" className="text-wcp-grey-700 hover:text-wcp-blue-600 font-semibold tracking-wide transition-colors">Services</Link>
+                        <Link to="/biens" className="text-wcp-grey-700 hover:text-wcp-blue-600 font-semibold tracking-wide transition-colors">Nos Biens</Link>
+                        <Link to="/contact" className="text-wcp-grey-700 hover:text-wcp-blue-600 font-semibold tracking-wide transition-colors">Contact</Link>
+                    </div>
+
+                    {/* CTA Button - Right */}
+                    <div className="hidden md:flex items-center">
 
                         {isAuthenticated ? (
                             <WCPButton
@@ -41,7 +45,7 @@ const Navbar = () => {
                                     navigate(redirectMap[user.role] || '/');
                                 }}
                                 variant="primary"
-                                className="rounded-full px-6 shadow-md hover:shadow-lg transform active:scale-95 transition-all bg-slate-900 border-slate-900"
+                                className="rounded-lg px-6 py-2.5 bg-gradient-to-br from-wcp-blue-600 to-wcp-blue-500 text-white font-bold shadow-[0_10px_20px_rgba(34,69,97,0.2)] hover:scale-[1.02] transform transition-all border-none"
                             >
                                 <Icon name="LayoutDashboard" className="mr-2" size={18} /> Mon Dashboard
                             </WCPButton>
@@ -49,7 +53,7 @@ const Navbar = () => {
                             <WCPButton
                                 onClick={() => navigate('/login')}
                                 variant="primary"
-                                className="rounded-full px-6 shadow-md hover:shadow-lg transform active:scale-95 transition-all"
+                                className="rounded-lg px-6 py-2.5 bg-gradient-to-br from-wcp-blue-600 to-wcp-blue-500 text-white font-bold shadow-[0_10px_20px_rgba(34,69,97,0.2)] hover:scale-[1.02] transform transition-all border-none"
                             >
                                 <Icon name="UserCircle" className="mr-2" size={18} /> Espace Client
                             </WCPButton>
