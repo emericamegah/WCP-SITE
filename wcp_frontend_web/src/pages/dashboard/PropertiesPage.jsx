@@ -4,9 +4,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Badge } from '../../components/ui/badge';
 
 const properties = [
-    { id: 1, name: 'Villa Californienne', owner: 'SCI Horizon', type: 'Vente', status: 'active', price: '1 250 000€' },
-    { id: 2, name: 'Appartement Vue Mer', owner: 'M. Martin', type: 'Vente', status: 'offer', price: '450 000€' },
-    { id: 3, name: 'Maison Basque', owner: 'Mme. Etcheverry', type: 'Location', status: 'rented', price: '2 500€/mois' },
+    { id: 1, name: 'Villa Californienne', owner: 'SCI Horizon', type: 'Vente', status: 'active', price: '800 000 000 FCFA' },
+    { id: 2, name: 'Appartement Vue Mer', owner: 'M. Martin', type: 'Vente', status: 'offer', price: '300 000 000 FCFA' },
+    { id: 3, name: 'Maison Coloniale', owner: 'Mme. Dossou', type: 'Location', status: 'rented', price: '1 500 000 FCFA/mois' },
 ];
 
 const PropertiesPage = () => {

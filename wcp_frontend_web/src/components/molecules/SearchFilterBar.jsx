@@ -16,10 +16,10 @@ const SearchFilterBar = ({ filters, onFilterChange, onSearch }) => {
 
     const budgetOptions = [
         { value: 'all', label: 'Tout budget' },
-        { value: 'under-300k', label: '< 300 000 €' },
-        { value: '300k-500k', label: '300k € - 500k €' },
-        { value: '500k-1m', label: '500k € - 1M €' },
-        { value: 'over-1m', label: '> 1 Million €' }
+        { value: 'under-100m', label: '< 100M FCFA' },
+        { value: '100m-300m', label: '100M - 300M FCFA' },
+        { value: '300m-500m', label: '300M - 500M FCFA' },
+        { value: 'over-500m', label: '> 500M FCFA' }
     ];
 
     return (

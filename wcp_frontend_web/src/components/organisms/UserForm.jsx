@@ -180,7 +180,7 @@ const UserForm = ({ initialData = null, onSubmit, onCancel }) => {
                                 </div>
                                 <div className="flex justify-between items-center p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
                                     <span className="text-xs font-bold text-slate-700">Appartement Vue Mer (REF-A2)</span>
-                                    <span className="text-xs font-black text-emerald-600">4 500 €</span>
+                                    <span className="text-xs font-black text-emerald-600">3 000 000 FCFA</span>
                                 </div>
                                 <p className="text-[10px] text-center text-slate-400 italic">Identifiant d'apport: {initialData?._id || 'NO_ID'}</p>
                             </div>

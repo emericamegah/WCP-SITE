@@ -185,8 +185,8 @@ const DynamicRequestForm = () => {
                             <h4 className="text-sm font-semibold uppercase tracking-wide mb-2">Vos Critères</h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="grid gap-2">
-                                    <Label>Budget Max (€)</Label>
-                                    <Input type="number" {...register('budget')} placeholder="Ex: 450000" />
+                                    <Label>Budget Max (FCFA)</Label>
+                                    <Input type="number" {...register('budget')} placeholder="Ex: 300000000" />
                                 </div>
                                 <div className="grid gap-2">
                                     <Label>Secteur</Label>

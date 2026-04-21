@@ -32,7 +32,7 @@ const DashboardHome = () => {
                 <StatCard title="Dossiers en attente" value="12" icon="FileStack" trend="+2" description="depuis hier" />
                 <StatCard title="Biens actifs" value="45" icon="Home" trend="+5%" description="ce mois-ci" />
                 <StatCard title="Tickets Maintenance" value="3" icon="Wrench" description="Urgence moyenne" />
-                <StatCard title="Chiffre d'affaires" value="124k€" icon="Euro" trend="+12%" description="vs N-1" />
+                <StatCard title="Chiffre d'affaires" value="81M FCFA" icon="Banknote" trend="+12%" description="vs N-1" />
             </div>
 
             {/* Main Grid */}
