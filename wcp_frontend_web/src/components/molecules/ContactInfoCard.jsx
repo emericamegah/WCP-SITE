@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Icon from '../atoms/Icon';
 
 const ContactInfoCard = ({ icon, title, content, link }) => {
-    const CardContent = () => (
+    const renderContent = () => (
         <div className="flex items-start p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex-shrink-0 p-3 bg-wcp-blue-50 text-wcp-blue-600 rounded-lg">
                 <Icon name={icon} size={24} />
@@ -18,12 +18,12 @@ const ContactInfoCard = ({ icon, title, content, link }) => {
     if (link) {
         return (
             <a href={link} className="block group">
-                <CardContent />
+                {renderContent()}
             </a>
         );
     }
 
-    return <CardContent />;
+    return renderContent();
 };
 
 ContactInfoCard.propTypes = {

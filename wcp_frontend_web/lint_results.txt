@@ -1,0 +1,268 @@
+
+> wcp_frontend_web@0.0.0 lint
+> eslint .
+
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/api/mockAdapter.js
+  11:38  error  'config' is defined but never used  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/atoms/DataPill.jsx
+  17:29  error  'type' is assigned a value but never used  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/atoms/DocButton.jsx
+  8:11  error  'Icon' is assigned a value but never used  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/atoms/FileUpload.jsx
+  42:8  warning  React Hook useCallback has a missing dependency: 'validateFile'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/auth/ProtectedRoute.jsx
+  10:13  error  'isAuthenticated' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  11:11  error  'location' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u         no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/auth/RoleGuard.jsx
+  10:32  error  'allowedRoles' is defined but never used                                                         no-unused-vars
+  11:13  error  'user' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+  11:19  error  'isAuthenticated' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  12:11  error  'location' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u         no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/molecules/ContactInfoCard.jsx
+  21:18  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  19 |         return (
+  20 |             <a href={link} className="block group">
+> 21 |                 <CardContent />
+     |                  ^^^^^^^^^^^ This component is created during render
+  22 |             </a>
+  23 |         );
+  24 |     }
+
+   4 |
+   5 | const ContactInfoCard = ({ icon, title, content, link }) => {
+>  6 |     const CardContent = () => (
+     |                         ^^^^^^^
+>  7 |         <div className="flex items-start p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex-shrink-0 p-3 bg-wcp-blue-50 text-wcp-blue-600 rounded-lg">
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |     );
+     | ^^^^^^ The component is created during render here
+  17 |
+  18 |     if (link) {
+  19 |         return (  react-hooks/static-components
+  26:13  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  24 |     }
+  25 |
+> 26 |     return <CardContent />;
+     |             ^^^^^^^^^^^ This component is created during render
+  27 | };
+  28 |
+  29 | ContactInfoCard.propTypes = {
+
+   4 |
+   5 | const ContactInfoCard = ({ icon, title, content, link }) => {
+>  6 |     const CardContent = () => (
+     |                         ^^^^^^^
+>  7 |         <div className="flex items-start p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             <div className="flex-shrink-0 p-3 bg-wcp-blue-50 text-wcp-blue-600 rounded-lg">
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |     );
+     | ^^^^^^ The component is created during render here
+  17 |
+  18 |     if (link) {
+  19 |         return (                                                                           react-hooks/static-components
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/molecules/MaintenanceTicket.jsx
+  29:26  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  27 |                 <div className="flex items-center">
+  28 |                     <MessageSquare size={14} className="mr-1" />
+> 29 |                     ID: {Math.random().toString(36).substr(2, 6).toUpperCase()}
+     |                          ^^^^^^^^^^^^^ Cannot call impure function
+  30 |                 </div>
+  31 |             </div>
+  32 |         </div>  react-hooks/purity
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/molecules/MediaUpload.jsx
+  56:8  warning  React Hook useCallback has a missing dependency: 'validateFile'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/molecules/MonthlyRevenueChart.jsx
+   5:38  error  'type' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  48:40  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  46 |                         tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`}
+  47 |                     />
+> 48 |                     <Tooltip content={<CustomTooltip />} cursor={{ fill: '#F3F4F6' }} />
+     |                                        ^^^^^^^^^^^^^ This component is created during render
+  49 |                     <Legend
+  50 |                         wrapperStyle={{ fontSize: '14px' }}
+  51 |                         iconType="circle"
+
+   5 | const MonthlyRevenueChart = ({ data, type = 'bar', height = 300, className = '' }) => {
+   6 |     // Custom tooltip
+>  7 |     const CustomTooltip = ({ active, payload }) => {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |         if (active && payload && payload.length) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |             return (
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |         return null;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |     };
+     | ^^^^^^ The component is created during render here
+  32 |
+  33 |     return (
+  34 |         <div className={className}>  react-hooks/static-components
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/AssignTenantModal.jsx
+  15:12  error  'contractDocument' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/BusinessReferralForm.jsx
+  34:34  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  32 |     });
+  33 |
+> 34 |     const selectedReferralType = watch('referralType', referralType);
+     |                                  ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  35 |
+  36 |     const onFormSubmit = handleSubmit((data) => {
+  37 |         onSubmit(data);  react-hooks/incompatible-library
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/ClientSubmissionForm.jsx
+  22:60  error  'watch' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/DynamicRequestForm.jsx
+  22:25  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  20 |     const { register, handleSubmit, watch, control, formState: { errors }, reset } = useForm();
+  21 |
+> 22 |     const requestType = watch('requestType', 'buy'); // Default to buy/rent
+     |                         ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  23 |
+  24 |     const onSubmit = (data) => {
+  25 |         console.log('Form Submitted:', data);  react-hooks/incompatible-library
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/HeroHeader.jsx
+  6:10  error  'navigateToPropertySubmission' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  6:40  error  'navigateToRequestSubmission' is defined but never used. Allowed unused vars must match /^[A-Z_]/u   no-unused-vars
+  9:11  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/PropertyApplicationForm.jsx
+  36:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  34 |     useEffect(() => {
+  35 |         if (propertyId) {
+> 36 |             setLoading(true);
+     |             ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  37 |             client.get(`/properties/${propertyId}`)
+  38 |                 .then(res => {
+  39 |                     setProperty(res.data);  react-hooks/set-state-in-effect
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/PropertyAssignmentManager.jsx
+    3:10  error  'properties' is defined but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+  146:39  error  'statusConfig' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/PropertySubmissionForm.jsx
+  67:31  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  65 |     });
+  66 |
+> 67 |     const requestEstimation = watch('requestEstimation', false);
+     |                               ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  68 |
+  69 |     const handleStepData = (data) => {
+  70 |         setFormData({ ...formData, ...data });  react-hooks/incompatible-library
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/organisms/UserForm.jsx
+  1:27  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/ui/badge.jsx
+  33:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/components/ui/button.jsx
+  47:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/contexts/AuthContext.jsx
+  52:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/pages/CheckoutPage.jsx
+  23:34  error  'data' is defined but never used  no-unused-vars
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/pages/PaymentSuccess.jsx
+  46:85  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  44 |                     <div className="mt-12 pt-10 border-t border-gray-50">
+  45 |                         <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">Transaction ID</p>
+> 46 |                         <p className="text-sm font-mono text-gray-500 mt-1">WCP-TX-{Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+     |                                                                                     ^^^^^^^^^^^^^ Cannot call impure function
+  47 |                     </div>
+  48 |                 </div>
+  49 |  react-hooks/purity
+
+/home/vongola/WCP-SITE/wcp_frontend_web/src/pages/SubmissionHub.jsx
+  25:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  23 |         const tabParam = searchParams.get('tab');
+  24 |         if (tabParam && ['property', 'request', 'referral'].includes(tabParam)) {
+> 25 |             setActiveTab(tabParam);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  26 |         }
+  27 |     }, [searchParams]);
+  28 |  react-hooks/set-state-in-effect
+  32:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  30 |     useEffect(() => {
+  31 |         if (propertyId) {
+> 32 |             setActiveTab('request');
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |         }
+  34 |     }, [propertyId]);
+  35 |                                                                                       react-hooks/set-state-in-effect
+
+/home/vongola/WCP-SITE/wcp_frontend_web/tailwind.config.js
+  288:9  error  'require' is not defined  no-undef
+
+✖ 36 problems (31 errors, 5 warnings)
+

@@ -2,33 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
-const MonthlyRevenueChart = ({ data, type = 'bar', height = 300, className = '' }) => {
-    // Custom tooltip
-    const CustomTooltip = ({ active, payload }) => {
-        if (active && payload && payload.length) {
-            return (
-                <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
-                    <p className="text-sm font-semibold text-[#111827] mb-2">
-                        {payload[0].payload.month}
+// Custom tooltip
+const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                <p className="text-sm font-semibold text-[#111827] mb-2">
+                    {payload[0].payload.month}
+                </p>
+                <p className="text-sm text-green-600">
+                    Revenus: {payload[0].value.toLocaleString()} FCFA
+                </p>
+                {payload[1] && (
+                    <p className="text-sm text-red-600">
+                        Charges: {payload[1].value.toLocaleString()} FCFA
                     </p>
-                    <p className="text-sm text-green-600">
-                        Revenus: {payload[0].value.toLocaleString()} FCFA
+                )}
+                {payload[2] && (
+                    <p className="text-sm text-blue-600 font-semibold mt-1">
+                        Net: {payload[2].value.toLocaleString()} FCFA
                     </p>
-                    {payload[1] && (
-                        <p className="text-sm text-red-600">
-                            Charges: {payload[1].value.toLocaleString()} FCFA
-                        </p>
-                    )}
-                    {payload[2] && (
-                        <p className="text-sm text-blue-600 font-semibold mt-1">
-                            Net: {payload[2].value.toLocaleString()} FCFA
-                        </p>
-                    )}
-                </div>
-            );
-        }
-        return null;
-    };
+                )}
+            </div>
+        );
+    }
+    return null;
+};
+
+CustomTooltip.propTypes = {
+    active: PropTypes.bool,
+    payload: PropTypes.array
+};
+
+const MonthlyRevenueChart = ({ data, height = 300, className = '' }) => {
 
     return (
         <div className={className}>

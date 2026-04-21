@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircle2, Download, Home, ArrowRight } from 'lucide-react';
 import WCPButton from '../components/atoms/WCPButton';
 
 const PaymentSuccess = () => {
     const navigate = useNavigate();
+    const [transactionId] = useState(() => Math.random().toString(36).substr(2, 9).toUpperCase());
 
     return (
         <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -43,7 +44,7 @@ const PaymentSuccess = () => {
 
                     <div className="mt-12 pt-10 border-t border-gray-50">
                         <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">Transaction ID</p>
-                        <p className="text-sm font-mono text-gray-500 mt-1">WCP-TX-{Math.random().toString(36).substr(2, 9).toUpperCase()}</p>
+                        <p className="text-sm font-mono text-gray-500 mt-1">WCP-TX-{transactionId}</p>
                     </div>
                 </div>
 

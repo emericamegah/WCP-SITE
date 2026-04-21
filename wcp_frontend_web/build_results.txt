@@ -1,0 +1,21 @@
+
+> wcp_frontend_web@0.0.0 build
+> vite build
+
+vite v7.3.1 building client environment for production...
+transforming...
+
+warn - The class `duration-[1500ms]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `duration-&lsqb;1500ms&rsqb;` to silence this warning.
+✓ 2676 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.46 kB │ gzip:   0.30 kB
+dist/assets/index-B4VwzI6a.css     86.66 kB │ gzip:  14.12 kB
+dist/assets/index-BiKVLgHt.js   1,739.10 kB │ gzip: 499.43 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.06s

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import StatusBadge from '../atoms/StatusBadge';
 import { MessageSquare, Calendar } from 'lucide-react';
@@ -9,6 +9,8 @@ const MaintenanceTicket = ({ subject, description, date, status, className = '' 
         month: 'long',
         year: 'numeric'
     });
+
+    const [ticketId] = useState(() => Math.random().toString(36).substr(2, 6).toUpperCase());
 
     return (
         <div className={`bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${className}`}>
@@ -26,7 +28,7 @@ const MaintenanceTicket = ({ subject, description, date, status, className = '' 
                 </div>
                 <div className="flex items-center">
                     <MessageSquare size={14} className="mr-1" />
-                    ID: {Math.random().toString(36).substr(2, 6).toUpperCase()}
+                    ID: {ticketId}
                 </div>
             </div>
         </div>
