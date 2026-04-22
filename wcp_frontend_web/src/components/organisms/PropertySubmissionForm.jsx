@@ -64,6 +64,7 @@ const PropertySubmissionForm = ({ onSubmit, onCancel }) => {
         mode: 'onBlur',
     });
 
+    // eslint-disable-next-line react-hooks/incompatible-library
     const requestEstimation = watch('requestEstimation', false);
 
     const handleStepData = (data) => {

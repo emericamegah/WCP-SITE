@@ -31,6 +31,7 @@ const BusinessReferralForm = ({ onSubmit, onCancel }) => {
         mode: 'onBlur',
     });
 
+    // eslint-disable-next-line react-hooks/incompatible-library
     const selectedReferralType = watch('referralType', referralType);
 
     const onFormSubmit = handleSubmit((data) => {

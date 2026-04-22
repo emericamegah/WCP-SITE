@@ -8,7 +8,7 @@ const setupMockAdapter = () => {
     // --- Properties ---
 
     // Get All Properties (with mocked filtering)
-    mock.onGet('/properties').reply((config) => {
+    mock.onGet('/properties').reply(() => {
         // Simple client-side mock filtering could be simulated here if params exist
         // For now, return all
         return [200, mockProperties];

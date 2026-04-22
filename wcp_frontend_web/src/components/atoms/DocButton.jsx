@@ -5,12 +5,13 @@ import { twMerge } from 'tailwind-merge';
 
 const DocButton = ({
     label,
-    icon: Icon = FileDown,
+    icon,
     onClick,
     variant = 'primary',
     disabled = false,
     className = ''
 }) => {
+    const IconComponent = icon || FileDown;
     const variants = {
         primary: 'bg-[#1E3A8A] text-white hover:bg-[#1E40AF] border-transparent',
         outline: 'bg-white text-[#1E3A8A] hover:bg-blue-50 border-2 border-[#1E3A8A]',
@@ -29,7 +30,7 @@ const DocButton = ({
                 className
             )}
         >
-            <Icon size={18} />
+            <IconComponent size={18} />
             <span>{label}</span>
         </button>
     );

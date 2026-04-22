@@ -1,13 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Building2 } from 'lucide-react';
 import SearchBar from '../molecules/SearchBar';
 import Icon from '../atoms/Icon';
-import { navigateToPropertySubmission, navigateToRequestSubmission } from '../../utils/submissionNavigator';
 
 const HeroHeader = () => {
-    const navigate = useNavigate();
-
     return (
         <div className="relative bg-wcp-dark text-white min-h-screen flex flex-col justify-center mb-0 overflow-hidden pt-20">
             {/* Background Image Overlay with Parallax */}

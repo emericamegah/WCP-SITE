@@ -19,7 +19,7 @@ const CLIENT_TYPES = [
 const ClientSubmissionForm = () => {
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const { register, handleSubmit, formState: { errors }, watch } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         mode: 'onBlur',
     });
 

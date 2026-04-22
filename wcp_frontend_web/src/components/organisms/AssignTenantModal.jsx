@@ -12,7 +12,7 @@ import FileUpload from '../atoms/FileUpload';
 
 const AssignTenantModal = ({ property, onClose, onSuccess }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [contractDocument, setContractDocument] = useState(null);
+    const [, setContractDocument] = useState(null);
 
     const availableTenants = getAvailableTenants();
     const tenantOptions = availableTenants.map(t => ({

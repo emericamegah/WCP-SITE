@@ -20,7 +20,7 @@ const CheckoutPage = () => {
         propertyName: "Villa Moderna, Cocody Riviera"
     };
 
-    const handlePaymentSubmit = (data) => {
+    const handlePaymentSubmit = () => {
         setIsProcessing(true);
 
         // Simulate API/Transaction delay

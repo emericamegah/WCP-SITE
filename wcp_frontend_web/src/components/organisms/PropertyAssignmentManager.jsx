@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Building2, Users, UserPlus, UserMinus, Edit2, Eye } from 'lucide-react';
-import { properties, owners } from '../../api/propertyAssignments';
+import { owners } from '../../api/propertyAssignments';
 import {
     getPropertiesByOwner,
     assignPropertyToOwner,
@@ -53,14 +53,7 @@ const PropertyAssignmentManager = () => {
         }
     };
 
-    const getStatusConfig = (status) => {
-        const configs = {
-            occupied: { label: 'Occupé', color: 'green' },
-            vacant: { label: 'Vacant', color: 'orange' },
-            for_sale: { label: 'À Vendre', color: 'blue' }
-        };
-        return configs[status] || { label: status, color: 'gray' };
-    };
+
 
     return (
         <div className="space-y-6" key={refreshKey}>
@@ -143,7 +136,6 @@ const PropertyAssignmentManager = () => {
                         </thead>
                         <tbody className="bg-white divide-y divide-slate-200">
                             {ownerProperties.map((property) => {
-                                const statusConfig = getStatusConfig(property.assignment.status);
                                 return (
                                     <tr key={property.id} className="hover:bg-slate-50 transition-colors">
                                         <td className="px-6 py-4">

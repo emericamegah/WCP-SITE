@@ -14,7 +14,7 @@ const statusConfig = {
     draft: { label: 'Brouillon', className: 'bg-slate-100 text-slate-700 hover:bg-slate-100 border-slate-200' },
 };
 
-const DataPill = ({ status, type = 'default' }) => {
+const DataPill = ({ status }) => {
     const config = statusConfig[status?.toLowerCase()] || { label: status, className: 'bg-gray-100 text-gray-800' };
 
     return (

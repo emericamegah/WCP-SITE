@@ -19,6 +19,7 @@ const DynamicRequestForm = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const { register, handleSubmit, watch, control, formState: { errors }, reset } = useForm();
 
+    // eslint-disable-next-line react-hooks/incompatible-library
     const requestType = watch('requestType', 'buy'); // Default to buy/rent
 
     const onSubmit = (data) => {

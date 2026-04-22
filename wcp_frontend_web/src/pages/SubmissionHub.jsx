@@ -22,6 +22,7 @@ const SubmissionHub = () => {
     useEffect(() => {
         const tabParam = searchParams.get('tab');
         if (tabParam && ['property', 'request', 'referral'].includes(tabParam)) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setActiveTab(tabParam);
         }
     }, [searchParams]);
@@ -29,6 +30,7 @@ const SubmissionHub = () => {
     // Force tab to 'request' if propertyId is provided to ensure user sees the right flow
     useEffect(() => {
         if (propertyId) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setActiveTab('request');
         }
     }, [propertyId]);

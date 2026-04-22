@@ -15,14 +15,14 @@ const FileUpload = ({
     const [isDragging, setIsDragging] = useState(false);
     const [error, setError] = useState('');
 
-    const validateFile = (file) => {
+    const validateFile = useCallback((file) => {
         if (file.size > maxSize) {
             setError(`Le fichier ${file.name} est trop volumineux (max ${maxSize / 1024 / 1024}MB)`);
             return false;
         }
         setError('');
         return true;
-    };
+    }, [maxSize]);
 
     const handleFiles = useCallback((newFiles) => {
         const validFiles = Array.from(newFiles).filter(validateFile);
@@ -39,7 +39,7 @@ const FileUpload = ({
         if (onChange) {
             onChange(updatedFiles.map(f => f.file));
         }
-    }, [files, multiple, onChange]);
+    }, [files, multiple, onChange, validateFile]);
 
     const handleDrop = useCallback((e) => {
         e.preventDefault();

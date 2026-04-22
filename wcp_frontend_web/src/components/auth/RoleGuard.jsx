@@ -1,15 +1,13 @@
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
 
 /**
  * RoleGuard Component
  * Protects routes based on specific user roles.
  * @param {string[]} allowedRoles - List of roles permitted to access the route
  */
-const RoleGuard = ({ children, allowedRoles }) => {
-    const { user, isAuthenticated } = useAuth();
-    const location = useLocation();
+const RoleGuard = ({ children }) => {
+    // const { user, isAuthenticated } = useAuth();
+    // const location = useLocation();
 
     /*
     if (!isAuthenticated) {

@@ -33,6 +33,7 @@ const PropertyApplicationForm = ({ propertyId, onSubmit, onCancel }) => {
 
     useEffect(() => {
         if (propertyId) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setLoading(true);
             client.get(`/properties/${propertyId}`)
                 .then(res => {
